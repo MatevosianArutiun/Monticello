@@ -1,0 +1,77 @@
+.navigation {
+  width: 100%;
+  background-color: rgba(125, 95, 250, 1);
+  height: 100px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 3;
+  @include flex(center, center, column);
+
+  &__container {
+    width: 100%;
+    @include flex(space-between, center, row);
+  }
+  &-active {
+    background-color: $white;
+  }
+  &__menu {
+    display: none;
+
+    @media screen and (min-width: $screen-desktop) {
+      @include flex(space-between, center, row);
+    }
+    &-item {
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+    &-item:not(:last-child) {
+      margin-right: 65px;
+    }
+    &-span {
+      padding: 4px;
+      border: 1px solid $white;
+      border-radius: 50%;
+      display: inline-block;
+    }
+    &-span:not(:last-child) {
+      margin-right: 15px;
+    }
+
+    &-link {
+      @include text($H50, 400, $white);
+      font-family: $font-book;
+      transition: all 0.2s linear;
+      &:hover {
+        color: $text-title;
+      }
+    }
+  }
+  &__social {
+    display: none;
+
+    @media screen and (min-width: $screen-desktop) {
+      @include flex(space-between, center, row);
+    }
+    &-item {
+      cursor: pointer;
+      padding: 10px;
+      border: 1px solid $border-color;
+      border-radius: 50%;
+      transition: all 0.3s linear;
+      &:hover {
+        border-radius: 20%;
+        border: 1px solid $hover;
+      }
+    }
+    &-item:not(:last-child) {
+      margin-right: 15px;
+    }
+
+    &-link {
+      display: block;
+    }
+  }
+}

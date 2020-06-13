@@ -1,0 +1,76 @@
+.section-projects {
+  padding-top: 140px;
+  position: relative;
+  &-top {
+    margin-bottom: 140px;
+  }
+  &__bg-box {
+    background-color: $bg-box;
+    width: 585px;
+    height: 470px;
+    position: absolute;
+    top: 275px;
+    z-index: -1;
+  }
+  &-bottom {
+    padding-top: 70px;
+    margin-bottom: 140px;
+    position: relative;
+  }
+  &__bg-box-bottom {
+    background-color: $bg-box;
+    width: 585px;
+    height: 470px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+  }
+  &__tltle {
+    text-align: center;
+    @include text($H700, 400, $text-title);
+    font-family: $font-bold;
+    text-transform: uppercase;
+    margin-bottom: 170px;
+  }
+  &__content {
+    @include flex(space-between, center, row);
+  }
+  &__content-bottom {
+    @include flex(space-between, center, row-reverse);
+  }
+  &__img-wrapper {
+    margin-right: 65px;
+  }
+  &__img-wrapper-bottom {
+    width: 50%;
+  }
+  &__info {
+    @include flex(center, flex-start, column);
+  }
+  &__info-bottom {
+    @include flex(center, flex-start, column);
+    margin-right: 70px;
+  }
+  &__subtitle {
+    @include text($H400, 700, $text-title);
+    font-family: $font-book;
+    margin-bottom: 15px;
+  }
+  &__info-tltle {
+    @include text($H700, 400, $text-title);
+    font-family: $font-bold;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+  }
+  &__text {
+    @include text($H200, 400, $text-main);
+    line-height: 1.6;
+    font-family: "Open Sans", sans-serif;
+    margin-bottom: 35px;
+  }
+  &__navigation {
+    @include text($H200, 400, $text-main);
+    font-family: "Open Sans", sans-serif;
+  }
+}

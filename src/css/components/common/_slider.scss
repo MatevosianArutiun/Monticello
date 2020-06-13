@@ -1,0 +1,79 @@
+.slider {
+  height: 50%;
+  padding: 0 30px;
+  padding-top: 75px;
+  padding-bottom: 20px;
+  position: relative;
+  width: 95%;
+  &__slide {
+    display: none;
+  }
+  &__slide-active {
+    @include flex(center, center, column);
+    animation: fadeInRight 3s linear;
+    @keyframes fadeInRight {
+      0% {
+        opacity: 0;
+      }
+      50% {
+        opacity: 0.5;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  }
+  &__title {
+    text-align: center;
+    @include text($H600, 700, $white);
+    font-family: $font-bold;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    @media screen and (min-width: $screen-desktop) {
+      @include text($H900, 700, $white);
+    }
+  }
+  &__text {
+    @include text($H50, 400, $white);
+    text-transform: uppercase;
+    font-family: $font-book;
+    letter-spacing: 3px;
+    line-height: 1.6;
+    text-align: center;
+    @media screen and (min-width: $screen-desktop) {
+      @include text($H200, 400, $white);
+    }
+  }
+  &__list {
+    @include flex(center, center, column);
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+  &__btn {
+    cursor: pointer;
+    padding: 4px;
+    border: 1px solid $white;
+    border-radius: 50%;
+  }
+  &__btn:not(:last-child) {
+    margin-bottom: 45px;
+  }
+  &__btn-active {
+    background-color: $white;
+    animation: fadeInRight 0.5s linear;
+    @keyframes fadeInRight {
+      0% {
+        opacity: 0;
+      }
+      50% {
+        opacity: 0.5;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  }
+}

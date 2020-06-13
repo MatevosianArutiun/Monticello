@@ -1,0 +1,41 @@
+// Colors
+$white: #ffffff;
+$bg-box: #55b7ff;
+$border-color: #b5c5fd;
+$text-main: #787f89;
+$text-data: #75c5ff;
+$text-title: #2c4058;
+$hover: rgba(49, 69, 92, 0);
+
+// Fonts
+$font-bold: "gothambold1", sans-serif;
+$font-book: "GothamBook", sans-serif;
+
+@function calcRem($size) {
+  $remSize: $size / 16px;
+  @return #{$remSize}rem;
+}
+
+$H900: calcRem(80px);
+$H800: calcRem(60px);
+$H700: calcRem(44px);
+$H600: calcRem(36px);
+$H500: calcRem(24px);
+$H400: calcRem(22px);
+$H300: calcRem(20px);
+$H200: calcRem(18px);
+$H100: calcRem(16px);
+$H50: calcRem(14px);
+$H20: calcRem(12px);
+$H10: calcRem(4px);
+
+$screen-iphone: 376px;
+$screen-iphone-plus: 410px;
+$screen-tablet-small: 600px;
+$screen-tablet-small: 500px;
+$screen-tablet: 769px;
+$screen-desktop: 1025px;
+$screen-desktop-large: 1280px;
+$screen-hd: 1366px;
+$screen-fullhd: 1440px;
+$screen-retina: 1660px;

@@ -1,0 +1,16 @@
+.button {
+  border: 1px solid #405268;
+  border-top: 2px solid #cacfd5;
+  padding: 15px 50px;
+  margin-bottom: 55px;
+  @include text($H50, 700, $text-title);
+  font-family: $font-book;
+  text-transform: uppercase;
+  transition: all 0.2s linear;
+  &:hover {
+    background-color: #cacfd5;
+  }
+  &:active {
+    transform: scaleX(0.9) translateY(2px);
+  }
+}

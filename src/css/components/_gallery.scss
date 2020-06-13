@@ -1,0 +1,25 @@
+.section-gallery {
+  @include flex(center, center, column);
+  &__title {
+    @include text($H700, 400, $text-title);
+    font-family: $font-bold;
+    text-transform: uppercase;
+    margin-bottom: 100px;
+  }
+  &__grid {
+    @include flex(center, center, row);
+    margin-bottom: 55px;
+  }
+  &__col {
+    @include flex(space-between, center, row);
+  }
+  .col--little {
+    @include flex(center, center, column);
+  }
+  &__col:not(:last-child) {
+    margin-right: 15px;
+  }
+  &__row--margin {
+    margin-bottom: 6px;
+  }
+}
