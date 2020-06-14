@@ -2,12 +2,16 @@
   height: 100vh;
   background-image: url(../images/header-bg-2.png);
   background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
   position: relative;
 
   &__background {
-    height: 100%;
+    height: 100vh;
     background-image: url(../images/header-bg-1.png);
     background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
     @include flex(center, center, column);
   }
   &__scroll {
@@ -39,7 +43,7 @@
       border-radius: 20%;
       border: 1px solid $hover;
     }
-    &-link {
+    &-span {
       text-align: center;
       transform: rotate(-90deg);
       display: block;

@@ -58,11 +58,14 @@
 @import "./core/common";
 
 // // // Common components
+@import "./components/common/button-up";
 @import "./components/common/navigation";
 @import "./components/common/slider";
 @import "./components/common/button";
+@import "./components/common/slider-news";
 
 // // // Components
 @import "./components/header";
 @import "./components/section-projects";
-@import "./components/gallery";
+@import "./components/section-news";
+@import "./components/section-gallery";
