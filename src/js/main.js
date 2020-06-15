@@ -82,17 +82,20 @@ let showHeaderSlider = () => {
       //     item.classList.toggle("slider-news__item-noactive");
       //   }
       // });
-
-      for (let i = 0; i < $sliderNewsItem.length; i++) {
-        if (
-          $sliderNewsItem[i].classList.contains("slider-news__item-noactive")
-        ) {
-          console.log($sliderNewsItem[i]);
-          $sliderNewsItem[i].classList.toggle("slider-news__item-noactive");
-          if (condition) {
+      let noActive = () => {
+        for (let i = 0; i < $sliderNewsItem.length; i++) {
+          if (
+            !$sliderNewsItem[i].classList.contains("slider-news__item-noactive")
+          ) {
+            return $sliderNewsItem[i];
           }
         }
-      }
+      };
+      console.log(noActive());
+
+      // if (!$sliderNewsItem.classList.contains("slider-news__item-noactive")) {
+      // }
+      // item.classList.remove("slider-news__item-noactive");
 
       // console.log($sliderNewsItem);
     });
