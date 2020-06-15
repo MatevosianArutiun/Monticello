@@ -2,7 +2,6 @@
 
 let switchingNavigation = () => {
   let $navigationMenu = document.querySelector(".navigation__menu");
-  let $menuLink = document.querySelectorAll(".navigation__menu-link");
   let $menuSpan = document.querySelectorAll(".navigation__menu-span");
 
   $navigationMenu.addEventListener("click", function (event) {
@@ -65,5 +64,39 @@ let showHeaderSlider = () => {
       }
     }
   });
+
+  let showNewsSlider = () => {
+    let $sliderNews = document.querySelector(".slider-news");
+    let $sliderNewsItem = document.querySelectorAll(".slider-news__item");
+
+    $sliderNews.addEventListener("click", function (event) {
+      let target = event.target;
+      if (!target.classList.contains("slider-news-btn")) return;
+
+      // $sliderNewsItem[0].classList.toggle("slider-news__item-noactive");
+      // $sliderNewsItem[1].classList.toggle("slider-news__item-noactive");
+
+      // $sliderNewsItem.forEach(function (item) {
+      //   if (item.classList.contains("slider-news__item-noactive")) {
+      //     console.log(item);
+      //     item.classList.toggle("slider-news__item-noactive");
+      //   }
+      // });
+
+      for (let i = 0; i < $sliderNewsItem.length; i++) {
+        if (
+          $sliderNewsItem[i].classList.contains("slider-news__item-noactive")
+        ) {
+          console.log($sliderNewsItem[i]);
+          $sliderNewsItem[i].classList.toggle("slider-news__item-noactive");
+          if (condition) {
+          }
+        }
+      }
+
+      // console.log($sliderNewsItem);
+    });
+  };
+  showNewsSlider();
 };
 showHeaderSlider();

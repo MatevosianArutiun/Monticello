@@ -1,0 +1,37 @@
+.footer {
+  background-image: url(../images/header-bg-2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  &__background {
+    background-image: url(../images/footer-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+  &__content {
+    padding-top: 200px;
+    padding-bottom: 210px;
+    max-width: 770px;
+    margin: 0 auto;
+  }
+  &__content-inner {
+    @include flex(center, center, row);
+    margin-bottom: 40px;
+  }
+  &__logo {
+    margin-right: 365px;
+    max-width: 245px;
+  }
+  &__copyright {
+    @include text($H50, 400, $white);
+    font-family: $font-book;
+  }
+  &__copyright:not(:last-child) {
+    margin-right: 50px;
+  }
+  &__copyright:nth-last-of-type(1) {
+    border-left: 1px solid $white;
+    padding-left: 20px;
+  }
+}

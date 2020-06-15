@@ -120,6 +120,7 @@
   &__navigation {
     @include text($H200, 400, $text-main);
     font-family: "Open Sans", sans-serif;
+    font-style: italic;
   }
   &__btn {
     margin-bottom: 55px;

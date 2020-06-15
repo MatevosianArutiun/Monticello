@@ -1,10 +1,79 @@
 .slider-news {
+  width: 100%;
+  position: relative;
+  margin-bottom: 210px;
+  &__list {
+    @include flex(center, center, row);
+  }
+
+  &__item {
+    max-width: 370px;
+    background-color: $white;
+    width: 90%;
+    @media screen and (min-width: $screen-desktop) {
+      width: auto;
+    }
+  }
+
+  // &__item:not(:last-child) {
+  //   margin-right: 40px;
+  // }
+  &__item-noactive {
+    display: none;
+  }
+  &__item-noactive:not(:last-child) {
+    margin-right: 0;
+  }
+  &__img-wrapper {
+    @include flex(center, center, column);
+  }
+  &__img {
+    margin-bottom: 30px;
+    width: 100%;
+    @media screen and (min-width: $screen-desktop) {
+      width: auto;
+    }
+  }
+  &__title {
+    @include text($H400, 700, $text-title);
+    font-family: $font-book;
+    text-transform: uppercase;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    padding: 0 20px;
+  }
+  &__text {
+    @include text($H200, 700, $text-main);
+    font-family: "Open Sans", sans-serif;
+    line-height: 1.6;
+    padding: 0 20px;
+    margin-bottom: 35px;
+  }
+  &__img-inner {
+    padding: 0 25px;
+    width: 100%;
+    margin-bottom: 25px;
+  }
+  &__userpic {
+    float: left;
+    margin-right: 15px;
+  }
+  &__subtitle {
+    padding: 10px 0 10px 0;
+    @include text($H200, 700, $text-title);
+    font-family: $font-book;
+    text-transform: uppercase;
+  }
+  &__data {
+    @include text($H50, 700, $bg-box);
+    font-family: $font-book;
+  }
   &__list-btn {
     height: 20px;
     position: absolute;
     @include flex(center, center, row);
     left: 0;
-    top: 80%;
+    top: 120%;
   }
   &__btn {
     // border: 1px solid red;
@@ -27,5 +96,51 @@
         opacity: 1;
       }
     }
+  }
+  &__btn-prev {
+    border: 1px solid $white;
+    position: absolute;
+    bottom: 50%;
+    left: 50px;
+    cursor: pointer;
+    border: 1px solid $white;
+    padding: 15px;
+    border-radius: 50%;
+    text-align: center;
+    transition: all 0.2s linear;
+    &:hover {
+      transform: scale(1.2, 1.2);
+    }
+  }
+
+  &__prev-content {
+    text-align: center;
+    display: block;
+    width: 19px;
+    height: 100%;
+    color: $white;
+  }
+  &__btn-next {
+    border: 1px solid $white;
+    position: absolute;
+    bottom: 50%;
+    right: 50px;
+    cursor: pointer;
+    border: 1px solid $white;
+    padding: 15px;
+    border-radius: 50%;
+    text-align: center;
+    transition: all 0.2s linear;
+    &:hover {
+      transform: scale(1.2, 1.2);
+    }
+  }
+  &__next-content {
+    text-align: center;
+    transform: rotate(-180deg);
+    display: block;
+    width: 19px;
+    height: 100%;
+    color: $white;
   }
 }

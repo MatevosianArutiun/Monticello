@@ -1,27 +1,25 @@
 .btn-up {
-    width:100px; 
-    text-align:center;
-    position:fixed;
-    bottom:0px;
-    right:15px;
-    cursor:pointer;
-    border: none;
-    width: 150px;
-    height: 150px;
-    margin: 10px auto;
-    border-radius: 50%;
-    text-decoration: none;
-    transition: all .5s linear;
-    opacity: 0.2;
-    display:none ;
+  text-align: center;
+  position: fixed;
+  bottom: 0px;
+  right: 15px;
+  cursor: pointer;
+  border: none;
+  width: 100px;
+  height: 100px;
+  margin: 10px auto;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: all 0.5s linear;
+  opacity: 0.2;
+  display: none;
+  @media screen and (min-width: $screen-desktop) {
+    display: inline-block;
+  }
+  &:hover {
     @media screen and (min-width: $screen-desktop) {
-        display:inline-block ;
+      transform: scale(1.2);
+      opacity: 1;
     }
-    &:hover {
-        @media screen and (min-width: $screen-desktop) {
-            transform: scale(1.2);
-            opacity: 1;
-        }
-        
-    }
-      }
+  }
+}

@@ -1,15 +1,35 @@
 .section-news {
-  height: 100vh;
+  margin-bottom: 140px;
+  // position: relative;
   background-image: url(../images/news-bg-2.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
   &__background {
-    position: relative;
-    height: 100vh;
+    padding-top: 140px;
+    // position: relative;
+
     background-image: url(../images/news-bg-1.png);
     background-repeat: no-repeat;
     background-position: center center;
-    @include flex(center, center, column);
+    @include flex(flex-start, center, column);
+  }
+  &__title {
+    position: relative;
+    padding-top: 40px;
+    @include text($H700, 700, $white);
+    text-transform: uppercase;
+    font-family: $font-book;
+    margin-bottom: 95px;
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 25%;
+      display: block;
+      content: "";
+      height: 1px;
+      width: 50%;
+      background-color: $white;
+    }
   }
 }
